@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HotelBooking - Tìm khách sạn tuyệt vời</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="stylekhachsan.css" />
+</head>
+<body>
+    <header class="border-bottom bg-light">
+        <nav class="container navbar navbar-expand-lg navbar-light py-2">
+            <a class="navbar-brand fw-bold text-primary" href="#">HotelBooking</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active border-bottom border-primary pb-2 px-3" aria-current="page" href="khachsan.html">Khách sạn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="uudai.html">Ưu đãi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Điểm đến</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Dịch vụ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Hỗ trợ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Về chúng tôi</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <a href="#" class="text-secondary d-flex align-items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path d="M14 14s-1-1.5-6-1.5S2 14 2 14s1 0 6 0 6 0 6 0z"/>
+                    </svg>
+                    Tài khoản
+                </a>
+                <a href="#" class="btn btn-warning px-3">Đăng ký</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-header-section text-center text-white py-5 position-relative">
+            <div class="container" style="max-width: 900px;">
+                <h1 class="fw-bold mb-3">Tìm khách sạn tuyệt vời</h1>
+                <p class="fs-5 mb-5">
+                    Khám phá hàng triệu khách sạn với giá tốt nhất và đặt phòng dễ dàng chỉ trong vài click
+                </p>
+                <!-- Form tìm kiếm -->
+                <section class="search-box bg-white rounded shadow p-4 mx-auto">
+                    <form class="row g-3 align-items-center">
+                        <!-- Điểm đến -->
+                        <div class="col-12 col-md-3">
+                            <label for="destination" class="form-label fw-semibold text-dark">Điểm đến</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0">
+                                    <i class="bi bi-geo-alt-fill text-muted"></i>
+                                </span>
+                                <input type="text" class="form-control border-start-0" id="destination" placeholder="Thành phố, khách sạn..." />
+                            </div>
+                        </div>
+                        <!-- Ngày nhận phòng -->
+                        <div class="col-6 col-md-3">
+                            <label for="checkinDate" class="form-label fw-semibold text-dark">Ngày nhận phòng</label>
+                            <input type="date" class="form-control" id="checkinDate" placeholder="dd/mm/yyyy" />
+                        </div>
+                        <!-- Ngày trả phòng -->
+                        <div class="col-6 col-md-3">
+                            <label for="checkoutDate" class="form-label fw-semibold text-dark">Ngày trả phòng</label>
+                            <input type="date" class="form-control" id="checkoutDate" placeholder="dd/mm/yyyy" />
+                        </div>
+                        <!-- Khách & Phòng -->
+                        <div class="col-12 col-md-3">
+                            <label for="guestRoom" class="form-label fw-semibold text-dark">Khách & Phòng</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0">
+                                    <i class="bi bi-person-fill text-muted"></i>
+                                </span>
+                                <select class="form-select border-start-0" id="guestRoom" aria-label="Chọn khách và phòng">
+                                    <option selected>2 người, 1 phòng</option>
+                                    <option>1 người, 1 phòng</option>
+                                    <option>2 người, 2 phòng</option>
+                                    <option>3 người, 1 phòng</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Nút tìm kiếm -->
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-warning w-100 py-3 fw-semibold fs-5">
+                                Tìm khách sạn
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
+
+        <section class="container my-5">
+            <div class="row">
+                <!-- Sidebar Bộ lọc -->
+                <aside class="col-md-3 mb-4">
+                    <div class="border rounded p-3 filter-sidebar">
+                        <h5 class="mb-3"><i class="bi bi-sliders me-2"></i>Bộ lọc</h5>
+
+                        <!-- Khoảng giá -->
+                        <div class="mb-4">
+                            <label for="priceRange" class="form-label">Khoảng giá</label>
+                            <input type="range" class="form-range" id="priceRange" min="0" max="10000000" step="100000" value="4600000" />
+                            <div class="d-flex justify-content-between text-muted small">
+                                <span id="priceMin">0 đ</span>
+                                <span id="priceMax">10.000.000 đ</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Đánh giá</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="star5" />
+                                <label class="form-check-label" for="star5">5 sao trở lên</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="star4" />
+                                <label class="form-check-label" for="star4">4 sao trở lên</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="star3" />
+                                <label class="form-check-label" for="star3">3 sao trở lên</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="star2" />
+                                <label class="form-check-label" for="star2">2 sao trở lên</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="star1" />
+                                <label class="form-check-label" for="star1">1 sao trở lên</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tiện ích</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="wifi" />
+                                <label class="form-check-label" for="wifi">WiFi miễn phí</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="hoBoi" />
+                                <label class="form-check-label" for="hoBoi">Hồ bơi</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gym" />
+                                <label class="form-check-label" for="gym">Gym</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="nhaHang" />
+                                <label class="form-check-label" for="nhaHang">Nhà hàng</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="spa" />
+                                <label class="form-check-label" for="spa">Spa</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="doXe" />
+                                <label class="form-check-label" for="doXe">Bãi đỗ xe</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="hoBoi" />
+                                <label class="form-check-label" for="hoBoi">Dịch vụ phòng</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="hoBoi" />
+                                <label class="form-check-label" for="hoBoi">Trung tâm thương mại</label>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-warning w-100 mb-2" id="applyFilters">Áp dụng bộ lọc</button>
+                        <button class="btn btn-outline-secondary w-100" id="clearFilters">Xóa bộ lọc</button>
+                    </div>
+                </aside>
+
+                <!-- Danh sách khách sạn -->
+                <section class="col-md-9">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4>Khách sạn được đề xuất</h4>
+                        <select class="form-select w-auto" aria-label="Sắp xếp theo" id="sortSelect">
+                            <option value="recommended" selected>Sắp xếp theo</option>
+                            <option value="priceAsc">Giá thấp đến cao</option>
+                            <option value="priceDesc">Giá cao đến thấp</option>
+                            <option value="ratingDesc">Đánh giá cao nhất</option>
+                            <option value="ratingAsc">Phổ biến nhất</option>
+                        </select>
+                    </div>
+
+                    <div id="hotelList" class="row g-4">
+                        <!-- Các item khách sạn sẽ được load JS -->
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button class="btn btn-outline-primary">Xem thêm khách sạn</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light pt-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <h6>HotelBooking</h6>
+                    <p class="small">Nền tảng đặt phòng khách sạn hàng đầu Việt Nam với hàng triệu lựa chọn tuyệt vời.</p>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6>Liên kết nhanh</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-light text-decoration-none">Về chúng tôi</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Điều khoản sử dụng</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Hỗ trợ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6>Điểm đến phổ biến</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-light text-decoration-none">Hồ Chí Minh</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Hà Nội</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Đà Nẵng</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Phú Quốc</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6>Liên hệ</h6>
+                    <p class="small mb-1">Email: support@hotelbooking.vn</p>
+                    <p class="small mb-1">Hotline: 1900 1234</p>
+                    <p class="small mb-0">Địa chỉ: 123 Nguyễn Huệ, Quận 1, TP.HCM</p>
+                </div>
+            </div>
+            <div class="text-center small border-top border-secondary pt-3 pb-2">
+                &copy; 2024 HotelBooking. Tất cả quyền được bảo lưu.
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scriptskhachsan.js"></script>
+</body>
+</html>

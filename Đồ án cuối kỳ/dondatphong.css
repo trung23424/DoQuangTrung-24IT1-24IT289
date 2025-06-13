@@ -1,0 +1,87 @@
+/* Căn chỉnh nhỏ, tùy chỉnh */
+body {
+    background-color: #f8f9fa;
+}
+
+header a:hover,
+footer a:hover {
+    text-decoration: underline;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.list-group-item input[type="radio"] {
+    cursor: pointer;
+}
+
+.sticky-top {
+    top: 1rem !important;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top {
+        position: static !important;
+        top: auto !important;
+    }
+}
+.navbar-nav .nav-link {
+    color: #4a4a4a;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+    color: #4d61fc;
+}
+.navbar-nav .nav-link.active {
+    color: #4d61fc;
+    border-bottom: 3px solid #4d61fc;
+    font-weight: 600;
+    padding-bottom: 0.4rem !important;
+}
+header .btn-warning {
+    background-color: #ff7800;
+    border-color: #ff7800;
+    font-weight: 600;
+}
+header .btn-warning:hover,
+header .btn-warning:focus {
+    background-color: #e56f00;
+    border-color: #e56f00;
+}
+.d-flex.align-items-center.gap-3 > a.text-secondary {
+    color: #666666;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.d-flex.align-items-center.gap-3 > a.text-secondary:hover {
+    color: #4d61fc;
+}
+.d-flex.align-items-center.gap-3 > a svg {
+    fill: currentColor;
+}
+footer.bg-dark {
+    background: #23272b !important;
+    color: #fff;
+}
+footer a.text-light, footer a.text-white {
+    color: #fff !important;
+    transition: color 0.2s;
+}
+footer a.text-light:hover, footer a.text-white:hover {
+    color: #ff7800 !important;
+    text-decoration: underline;
+}
+footer h6, footer h5 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+footer .small {
+    font-size: 0.95rem;
+}
+footer .border-top {
+    border-top: 1px solid #444 !important;
+}
